@@ -10,7 +10,6 @@
 </head>
 
 <body class="<?php if (is_front_page()) {
-                // This is the blog posts index
                 echo "body-home";
               } ?>">
   <header>
@@ -20,7 +19,7 @@
 
         <div class="logo">
           <?php
-          if (is_page(array('blog', 'contact'))) { ?>
+          if (is_page(array('blog', 'contact', 'sign-up'))) { ?>
             <a href="<?php echo esc_url(home_url('/')); ?>"> <img src="<?php the_field('orange-logo', 'option'); ?>" /></a>
           <?php
           } else {
@@ -29,16 +28,13 @@
         </div>
 
         <div class="d-flex justify-content-between align-items-center">
-          <?php wp_nav_menu(array('theme_location' => 'header_nav')); ?>
-
-          <?php $link = get_field('login_btn', 'option'); ?>
-          <a class="header_btn login-btn" href="<?php echo $link['url'] ?>"><?php echo $link['title'] ?></a>
-
-          <?php $link = get_field('signup_btn', 'option'); ?>
-          <a class="header_btn signup-btn" href="<?php echo $link['url'] ?>"><?php echo $link['title'] ?></a>
-
-          <div class="lang"><?php the_field('lang', 'option'); ?></div>
-
+          <?php
+          if (is_page(array('blog', 'contact', 'sign-up'))) {
+            wp_nav_menu(array('theme_location' => 'header-black_nav'));
+          } else {
+            wp_nav_menu(array('theme_location' => 'header_nav'));
+          }
+          ?>
         </div>
 
       </nav>

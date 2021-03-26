@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
   position: relative;
   min-height: 100vh;
@@ -27,7 +27,11 @@ a:hover {
   color: inherit;
 }
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
   margin: 0;
   padding: 0;
 }
@@ -51,43 +55,80 @@ h1, h2, h3, h4, p {
 }
 
 .menu .menu-item {
-  margin-right: 40px;
-}
-
-.menu .menu-item a {
-  font-size: 14px;
-  font-weight: 500;
+  margin: 0 20px;
   color: #fff;
+  font-weight: 600;
   text-transform: uppercase;
+  font-size: 14px;
 }
 
-.header_btn {
+.menu .menu-item.black {
+  color: #111;
+}
+
+.menu-item.header_btn {
   padding: 12px 25px;
   border-radius: 10px;
   border: solid 1px #ffffff;
   background-color: transparent;
   color: #fff;
   margin: 0 10px;
-  font-weight: 600;
+  text-transform: none;
 }
 
-.signup-btn {
+.menu-item.header_btn.black {
+  border-color: #ff8d1e;
+  color: #ff8d1e;
+}
+
+.menu-item.signup-btn {
   background-color: #fff;
   color: #ff8d1e;
 }
 
-.lang.dropdown {
-  text-transform: uppercase;
-  margin-left: 15px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #ffffff;
+.menu-item.signup-btn.black {
+  background-color: #ff8d1e;
+  color: #fff;
 }
 
-.lang {
-  font-weight: 500;
-  color: #ffffff;
-  text-transform: uppercase;
+// .lang.dropdown {
+//   text-transform: uppercase;
+//   margin-left: 15px;
+//   font-size: 14px;
+//   font-weight: 500;
+//   color: #ffffff;
+// }
+
+// .lang {
+//   font-weight: 500;
+//   color: #ffffff;
+//   text-transform: uppercase;
+// }
+
+.trp-language-switcher-container {
+  position: relative;
+  padding: 2px 10px;
+  cursor: pointer;
+}
+
+ul.sub-menu {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+ul.sub-menu span {
+  display: block;
+}
+
+.black ul.sub-menu {
+  background-color: rgba(1, 1, 1, 0.4);
+}
+
+.trp-language-switcher-container:hover ul.sub-menu {
+  display: block;
 }
 
 /* HOMEPAGE SECTIONS */
@@ -257,20 +298,24 @@ h1.content_title {
   grid-template-columns: 1fr 1fr;
 }
 
-.rent, .cap-rate {
+.rent,
+.cap-rate {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 16px;
 }
 
-.return, .neighborhood {
+.return,
+.neighborhood {
   padding-top: 16px;
 }
 
-.cap-rate, .neighborhood {
+.cap-rate,
+.neighborhood {
   padding-left: 16px;
 }
 
-.rent, .return {
+.rent,
+.return {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -297,7 +342,7 @@ h1.content_title {
   padding: 0 45px;
 }
 
-.cards-top3>div:last-child {
+.cards-top3 > div:last-child {
   margin-right: auto;
 }
 
@@ -369,17 +414,17 @@ h1.content_title {
 
 #wpforms-form-140 .wpforms-field-medium[type="email"],
 #wpforms-form-350 .wpforms-field-medium[type="email"] {
-  background-image: url('http://localhost/real-estate/wp-content/uploads/2020/12/envelope.png');
+  background-image: url("http://localhost/real-estate/wp-content/uploads/2020/12/envelope.png");
 }
 
 #wpforms-form-350 .wpforms-field-medium[type="number"] {
-  background-image: url('http://localhost/real-estate/wp-content/uploads/2021/02/phone.png');
+  background-image: url("http://localhost/real-estate/wp-content/uploads/2021/02/phone.png");
 }
 
 #wpforms-form-140 textarea.wpforms-field-medium,
 #wpforms-form-350 textarea.wpforms-field-medium {
   height: 195px;
-  background-image: url('http://localhost/real-estate/wp-content/uploads/2020/12/comment.png');
+  background-image: url("http://localhost/real-estate/wp-content/uploads/2020/12/comment.png");
 }
 
 #wpforms-form-140 .wpforms-field-medium::placeholder,
@@ -415,7 +460,6 @@ h1.content_title {
 }
 /* *** */
 
-
 /* footer */
 
 footer {
@@ -432,7 +476,7 @@ footer .container {
 }
 
 footer .container::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 200%;
   height: 100%;
@@ -443,7 +487,7 @@ footer .container::before {
   border-top-right-radius: 50px;
 }
 
-footer .container>div {
+footer .container > div {
   max-width: 1060px;
 }
 
@@ -456,7 +500,7 @@ footer .container>div {
   width: 66px;
   height: 64px;
   border-radius: 10px;
-  background: url('http://localhost/real-estate/wp-content/uploads/2020/12/e-arrow.png') #ffffff center no-repeat;
+  background: url("http://localhost/real-estate/wp-content/uploads/2020/12/e-arrow.png") #ffffff center no-repeat;
 }
 
 /* middle */
