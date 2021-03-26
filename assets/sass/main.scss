@@ -1,0 +1,511 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 720px;
+  color: #373737;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* header */
+
+.header_nav {
+  height: 100px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu .menu-item {
+  margin-right: 40px;
+}
+
+.menu .menu-item a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.header_btn {
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: solid 1px #ffffff;
+  background-color: transparent;
+  color: #fff;
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+.signup-btn {
+  background-color: #fff;
+  color: #ff8d1e;
+}
+
+.lang.dropdown {
+  text-transform: uppercase;
+  margin-left: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.lang {
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* HOMEPAGE SECTIONS */
+
+.image-top-bgd {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+}
+
+/* SECTION 1 */
+
+.home-section {
+  margin-top: 115px;
+}
+
+.content {
+  max-width: 500px;
+}
+
+.content_title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #373737;
+  text-transform: capitalize;
+}
+
+h1.content_title {
+  text-transform: uppercase;
+}
+
+.content_lead {
+  margin: 56px 0 44px;
+  font-size: 18px;
+  color: #7b7b7b;
+}
+
+.content_link_btn a {
+  display: inline-block;
+  padding: 16px 40px;
+  border-radius: 10px;
+  background-color: #ff8d1e;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* SECTION 2 */
+
+.image-bgd {
+  width: 617px;
+  height: 637px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  z-index: -1;
+}
+
+.content_title span {
+  color: #ff8d1e;
+}
+
+/* SECTION 3 */
+
+.center_bgd {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100px;
+  z-index: -1;
+}
+
+.cards {
+  margin-top: 95px;
+}
+
+.card {
+  border: none;
+  padding: 48px 45px 40px;
+  border-radius: 20px;
+  box-shadow: 5.9px 8.1px 32px 0 rgba(0, 61, 142, 0.15);
+  background-color: #ffffff;
+  max-width: 270px;
+  margin-bottom: 30px;
+}
+
+.card-icon {
+  width: 120px;
+  height: 120px;
+  background-color: rgba(214, 233, 248, 0.3);
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.card_icon_number {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -19px;
+  font-size: 28px;
+  font-weight: 600;
+  width: 38px;
+  height: 38px;
+  background-color: #ff8d1e;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.card-content h3 {
+  margin: 30px 0 24px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #7b7b7b;
+}
+
+/* SECTION 4 */
+
+#section-four .content_lead {
+  max-width: 640px;
+  margin: 56px auto 50px;
+}
+
+/* SECTION 5 */
+
+#section-five .cards {
+  margin-bottom: 10px;
+}
+
+.house-card {
+  overflow: hidden;
+  padding: 0;
+}
+
+.card-thumb {
+  position: relative;
+  max-height: 200px;
+}
+
+.image-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.price {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.card-info {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.rent, .cap-rate {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 16px;
+}
+
+.return, .neighborhood {
+  padding-top: 16px;
+}
+
+.cap-rate, .neighborhood {
+  padding-left: 16px;
+}
+
+.rent, .return {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-info div p:first-child {
+  font-size: 12px;
+  color: #7b7b7b;
+}
+
+.card-info div p:nth-child(2) {
+  font-size: 16px;
+  color: #373737;
+}
+
+/* SECTION 6 */
+
+.bgd-square {
+  top: 47%;
+  position: absolute;
+  z-index: -1;
+}
+
+.cards-top3 {
+  margin-top: 30px;
+  padding: 0 45px;
+}
+
+.cards-top3>div:last-child {
+  margin-right: auto;
+}
+
+.cards-top3 .card {
+  max-width: 347px;
+  padding: 0;
+  border-radius: 20px;
+  box-shadow: 6.5px 8.9px 32px 0 rgba(0, 61, 142, 0.15);
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.cards-top3 .card-content {
+  padding: 34px 40px;
+}
+
+.cards-top3 .card-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cards-top3 .card-text {
+  font-size: 18px;
+  margin-top: 24px;
+  height: 52px;
+  overflow: hidden;
+}
+
+.cards-top3 .content-link {
+  display: inline-block;
+  margin-top: 34px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #006ac3;
+  padding-right: 27px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+/* SECTION 7 */
+
+#section-seven .image-bgd {
+  right: 0;
+  top: -160px;
+  width: 708px;
+  height: 907px;
+  left: auto;
+}
+
+/* FORM */
+
+#wpforms-form-140 .wpforms-field-medium,
+#wpforms-form-350 .wpforms-field-medium {
+  height: 69px;
+  max-width: 426px;
+  border: solid 1px #caddec;
+  padding: 25px 20px 25px 60px;
+  background: url(http://localhost/real-estate/wp-content/uploads/2020/12/man-user-1.png) #f9fcfe 20px 23px no-repeat;
+}
+
+#wpforms-form-350 .wpforms-field-medium {
+  max-width: 635px;
+}
+
+#wpforms-form-350 select.wpforms-field-medium {
+  background-image: none;
+  padding-left: 30px;
+}
+
+#wpforms-form-140 .wpforms-field-medium[type="email"],
+#wpforms-form-350 .wpforms-field-medium[type="email"] {
+  background-image: url('http://localhost/real-estate/wp-content/uploads/2020/12/envelope.png');
+}
+
+#wpforms-form-350 .wpforms-field-medium[type="number"] {
+  background-image: url('http://localhost/real-estate/wp-content/uploads/2021/02/phone.png');
+}
+
+#wpforms-form-140 textarea.wpforms-field-medium,
+#wpforms-form-350 textarea.wpforms-field-medium {
+  height: 195px;
+  background-image: url('http://localhost/real-estate/wp-content/uploads/2020/12/comment.png');
+}
+
+#wpforms-form-140 .wpforms-field-medium::placeholder,
+#wpforms-form-350 .wpforms-field-medium::placeholder {
+  line-height: 18px;
+  font-size: 18px;
+  color: #7791b2;
+}
+
+#wpforms-form-140 .wpforms-submit-container button,
+#wpforms-form-350 .wpforms-submit-container button {
+  padding: 16px 40px;
+  border-radius: 10px;
+  background-color: #ff8d1e;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  margin-top: 20px;
+}
+
+/* text in form */
+#wpforms-form-350 #wpforms-350-field_8 {
+  border: none;
+  background: none;
+  padding: 15px 0 0;
+  height: auto;
+  resize: none;
+}
+
+#wpforms-form-350 #wpforms-350-field_8::placeholder {
+  color: #7b7b7b;
+}
+/* *** */
+
+
+/* footer */
+
+footer {
+  background-color: #006ac3;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+footer .container {
+  position: relative;
+}
+
+footer .container::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  top: 144px;
+  right: 40px;
+  background-color: #585858;
+  z-index: -1;
+  border-top-right-radius: 50px;
+}
+
+footer .container>div {
+  max-width: 1060px;
+}
+
+.footer-top {
+  padding: 40px 0;
+}
+
+.to-top-link {
+  display: inline-block;
+  width: 66px;
+  height: 64px;
+  border-radius: 10px;
+  background: url('http://localhost/real-estate/wp-content/uploads/2020/12/e-arrow.png') #ffffff center no-repeat;
+}
+
+/* middle */
+
+.footer-middle {
+  padding: 85px 0 95px;
+  border-bottom: 1px solid rgba(108, 108, 108, 0.3);
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.footer-nav .menu {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav .menu li {
+  margin-bottom: 15px;
+  margin-right: 0;
+}
+
+.footer-nav .menu .menu-item a {
+  text-transform: capitalize;
+}
+
+.footer-nav.terms .menu .menu-item a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-nav.pages {
+  padding-left: 70px;
+}
+
+.social-links {
+  margin-top: 30px;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+/* bottom */
+
+.footer-bottom p {
+  padding: 30px 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.4);
+}

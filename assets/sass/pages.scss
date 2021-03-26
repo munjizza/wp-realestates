@@ -1,0 +1,267 @@
+.header-pages .container {
+    /* padding-bottom: 10px; */
+    border-bottom: solid 1px #caddec
+}
+
+.header-pages .menu .menu-item a {
+    color: #373737;
+}
+
+.header-pages .header_btn {
+    border-radius: 10px;
+    border: solid 1px #ff8d1e;
+    color: #ff8d1e;
+}
+
+.header-pages .signup-btn {
+    background-color: #ff8d1e;
+    color: #fff;
+}
+
+.header-pages .lang {
+    color: #373737;
+}
+
+/* BLOG PAGE */
+
+.blog-section {
+    margin-top: 140px;
+    margin-top: 50px;
+}
+
+/* section 2 */
+
+.blog-section-bg-img {
+    position: absolute;
+    z-index: -1;
+}
+
+#section_blog_two .blog-section-bg-img {
+    top: 40%;
+    right: -60px;
+}
+
+/* section 3 */
+
+#section_blog_three .row {
+    margin-top: 130px;
+}
+
+.guides {
+    max-width: 370px;
+}
+
+.guides .label {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.guides .title {
+    line-height: 1;
+    font-size: 36px;
+    font-weight: 700;
+    color: #ff8d1e;
+}
+
+.guides .link {
+    font-size: 18px;
+    font-weight: 600;
+    color: #006ac3;
+    margin-top: 34px;
+    display: inline-block;
+}
+
+.guides .guide_img {
+    margin-top: -50px;
+}
+
+#section_blog_three .blog-section-bg-img {
+    top: 130px;
+    left: -50px;
+}
+
+/* categories */
+
+.blog-category {
+    background-size: contain;
+}
+
+.blog-category:nth-child(even) {
+    background: url(http://localhost/real-estate/wp-content/uploads/2021/01/bg-blog-left.png) 0 22px no-repeat;
+}
+
+.blog-category:nth-child(even) .post-category {
+    text-align: left;
+}
+
+.blog-category:nth-child(odd) {
+    background: url(http://localhost/real-estate/wp-content/uploads/2021/01/bg-blog-right.png) 100% 22px no-repeat;
+}
+
+.blog-category:nth-child(odd) .post-category {
+    text-align: right;
+}
+
+.all-in-category-link {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #006ac3;
+}
+
+/* page content */
+
+.container.single-post {
+    padding-top: 70px;
+}
+
+.post-category {
+    font-size: 24px;
+    font-weight: 700;
+    color: #006ac3;
+    margin-bottom: 28px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.post-title {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: #373737;
+    margin-bottom: 68px;
+}
+
+.lead-img {
+    position: relative;
+    background-size: cover;
+    background-position: 50%;
+    min-height: 430px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    border-radius: 25px;
+}
+
+.body-content p, .body-content ul, .body-content ol {
+    max-width: 768px;
+    margin: 0 auto 20px;
+}
+
+.body-content h3 {
+    margin: 60px 0 40px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.body-content p {
+    font-size: 18px;
+    line-height: 1.44;
+}
+
+.body-content a {
+    color: #ff8d1e;
+    text-decoration: underline;
+}
+
+.body-content ol {
+    padding-left: 20px;
+}
+
+.body-content>div {
+    margin: 60px auto;
+}
+
+.body-content .wp-block-image {
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-height: 470px;
+    border-radius: 25px;
+}
+
+.post-date {
+    margin: 60px 0;
+    font-size: 16px;
+    text-align: center;
+    color: #7b7b7b;
+}
+
+/* ************ */
+
+/* CONTACT PAGE */
+
+/* ************ */
+
+.contact_title {
+    font-weight: bold;
+    line-height: 1.6;
+    color: #373737;
+}
+
+.contact_title span {
+    color: #006ac3;
+}
+
+.content_link_btn a.btn-blue {
+    background-color: #006ac3;
+    margin-right: 8px;
+    border: 1px solid #006ac3;
+}
+
+.content_link_btn a.btn-white {
+    color: #006ac3;
+    background-color: #fff;
+    border: 1px solid #006ac3;
+}
+
+/* questions */
+
+.questions-heding-lead-text {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 640px;
+}
+
+.accordion {
+    max-width: 770px;
+    /* height: 80px; */
+    margin: 39px auto;
+    padding: 0 30px;
+    border-radius: 20px;
+    box-shadow: 5.9px 8.1px 32px 0 rgba(0, 61, 142, 0.15);
+    background-color: #ffffff;
+}
+
+.question_title {
+    padding: 30px 0;
+    font-weight: 700;
+    background: url(http://localhost/real-estate/wp-content/uploads/2021/02/down-arrow-acc.png) right 35px no-repeat;
+}
+
+.question_title .number {
+    color: #006ac3;
+    margin-right: 30px;
+}
+
+.question_text {
+    margin: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.question_text.show {
+    height: auto;
+    opacity: 1;
+    padding: 30px 0;
+    border-top: 1px solid #caddec;
+    transition: all 0.2s ease;
+}
