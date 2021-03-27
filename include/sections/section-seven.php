@@ -9,7 +9,7 @@
             <h2 class="content_title"><?php the_sub_field('content_title'); ?> <span><?php the_sub_field('content_title_orange'); ?></span></h2>
             <p class="content_lead"><?php the_sub_field('content_lead'); ?></p>
             <div class="form">
-              <?php echo do_shortcode('[wpforms id="140"]'); ?>
+              <?php echo do_shortcode('[contact-form-7 id="405" title="Contact form homepage"]'); ?>
             </div>
           </div>
 

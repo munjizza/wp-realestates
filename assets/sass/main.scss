@@ -394,48 +394,47 @@ h1.content_title {
 
 /* FORM */
 
-#wpforms-form-140 .wpforms-field-medium,
-#wpforms-form-350 .wpforms-field-medium {
+.form input,
+.form textarea {
   height: 69px;
   max-width: 426px;
   border: solid 1px #caddec;
   padding: 25px 20px 25px 60px;
+  margin-bottom: 16px;
   background: url(http://localhost/real-estate/wp-content/uploads/2020/12/man-user-1.png) #f9fcfe 20px 23px no-repeat;
 }
 
-#wpforms-form-350 .wpforms-field-medium {
-  max-width: 635px;
-}
+// #wpforms-form-350 .wpforms-field-medium {
+//   max-width: 635px;
+// }
 
-#wpforms-form-350 select.wpforms-field-medium {
-  background-image: none;
-  padding-left: 30px;
-}
+// #wpforms-form-350 select.wpforms-field-medium {
+//   background-image: none;
+//   padding-left: 30px;
+// }
 
-#wpforms-form-140 .wpforms-field-medium[type="email"],
-#wpforms-form-350 .wpforms-field-medium[type="email"] {
+.form input.email {
   background-image: url("http://localhost/real-estate/wp-content/uploads/2020/12/envelope.png");
 }
 
-#wpforms-form-350 .wpforms-field-medium[type="number"] {
-  background-image: url("http://localhost/real-estate/wp-content/uploads/2021/02/phone.png");
-}
+// #wpforms-form-350 .wpforms-field-medium[type="number"] {
+//   background-image: url("http://localhost/real-estate/wp-content/uploads/2021/02/phone.png");
+// }
 
-#wpforms-form-140 textarea.wpforms-field-medium,
-#wpforms-form-350 textarea.wpforms-field-medium {
+.form textarea {
   height: 195px;
   background-image: url("http://localhost/real-estate/wp-content/uploads/2020/12/comment.png");
 }
 
-#wpforms-form-140 .wpforms-field-medium::placeholder,
-#wpforms-form-350 .wpforms-field-medium::placeholder {
+.form input::placeholder,
+.form textarea::placeholder {
   line-height: 18px;
   font-size: 18px;
   color: #7791b2;
 }
 
-#wpforms-form-140 .wpforms-submit-container button,
-#wpforms-form-350 .wpforms-submit-container button {
+.form .submitBtn {
+  background-image: none;
   padding: 16px 40px;
   border-radius: 10px;
   background-color: #ff8d1e;

@@ -7,7 +7,7 @@
             <div class="row justify-content-between contact-container position-relative mt-5">
 
                 <div class="col-md-6 form">
-                    <?php echo do_shortcode('[wpforms id="350"]'); ?>
+                    <?php echo do_shortcode('[contact-form-7 id="405" title="Contact form homepage"]'); ?>
                 </div>
 
                 <div class="col-md-6 pl-5">
