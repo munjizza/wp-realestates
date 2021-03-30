@@ -12,7 +12,7 @@
 <body class="<?php if (is_front_page()) {
                 echo "body-home";
               } ?>">
-  <header>
+  <header class="container-fluid p-0 position-absolute">
     <div class="container">
 
       <nav class="d-flex justify-content-between align-items-center header_nav">

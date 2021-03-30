@@ -1,7 +1,9 @@
 <?php if (have_rows('sections')) : ?>
     <?php while (have_rows('sections')) : the_row(); ?>
         <?php if (get_row_layout() == 'section_one') : ?>
-            <div class="home-section" id="section-one">
+
+            <?php $bgd_image = get_field('blue_wave_bgd'); ?>
+            <div id="section-one" style="background-image: url(<?php echo $bgd_image ?>)">
 
                 <div class="row container align-items-center justify-content-between">
                     <div class="content col-md-6">

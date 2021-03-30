@@ -1,6 +1,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 50px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -123,6 +125,10 @@ ul.sub-menu span {
   display: block;
 }
 
+.add-padding {
+  padding-top: 120px;
+}
+
 /* HOMEPAGE SECTIONS */
 .image-top-bgd {
   position: absolute;
@@ -133,7 +139,19 @@ ul.sub-menu span {
 
 /* SECTION 1 */
 .home-section {
-  margin-top: 115px;
+  margin-top: 140px;
+}
+
+#section-one {
+  padding-top: 120px;
+  background-size: 100% 100%;
+  min-height: 780px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .content {
@@ -248,7 +266,7 @@ h1.content_title {
 }
 
 /* SECTION 5 */
-#section-five .cards {
+#section-houses .cards {
   margin-bottom: 10px;
 }
 
@@ -320,11 +338,20 @@ h1.content_title {
   color: #373737;
 }
 
+.rating-stars span {
+  font-size: 14px;
+  margin: 0 1px;
+  color: #ccc9c9;
+}
+
+.rating-stars span.checked {
+  color: #f3ca15;
+}
+
 /* SECTION 6 */
-.bgd-square {
-  top: 47%;
-  position: absolute;
-  z-index: -1;
+#section-six {
+  background-repeat: no-repeat;
+  background-position: 100% 90%;
 }
 
 .cards-top3 {
@@ -389,7 +416,7 @@ h1.content_title {
   max-width: 426px;
   border: solid 1px #caddec;
   padding: 25px 20px 25px 60px;
-  margin-bottom: 16px;
+  margin: 8px 0;
   background: url(http://localhost/real-estate/wp-content/uploads/2020/12/man-user-1.png) #f9fcfe 20px 23px no-repeat;
 }
 
@@ -442,6 +469,10 @@ h1.content_title {
   margin-top: 20px;
 }
 
+.form .wpcf7-not-valid {
+  border: 2px solid #cc1111;
+}
+
 /* text in form */
 #wpforms-form-350 #wpforms-350-field_8 {
   border: none;
@@ -468,6 +499,10 @@ h1.content_title {
 }
 
 /* *** */
+.single-post {
+  padding-top: 110px;
+}
+
 /* footer */
 footer {
   background-color: #006ac3;

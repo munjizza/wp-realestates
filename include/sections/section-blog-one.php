@@ -1,7 +1,7 @@
 <?php if (have_rows('sections_blog')) : ?>
     <?php while (have_rows('sections_blog')) : the_row(); ?>
         <?php if (get_row_layout() == 'sections_blog_one') : ?>
-            <div class="container  mt-5" id="">
+            <div class="container" id="">
 
 
                 <h2 class="content_title text-center"><?php the_sub_field('section-title'); ?></h2>

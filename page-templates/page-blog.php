@@ -5,7 +5,7 @@
 
 <?php get_header(); ?>
 
-    <div class="sections">
+    <div class="add-padding">
         <?php $featured_posts = get_field('relationship_blog'); ?>
         <?php if ($featured_posts) : ?>
 

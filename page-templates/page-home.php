@@ -6,11 +6,6 @@
 
 <?php get_header(); ?>
 
-<div class="image-top-bgd text-center">
-    <?php $bgd_image = get_field('blue_wave_bgd'); ?>
-    <img src="<?php echo $bgd_image ?>" class="img-fluid" />
-</div>
-
 <div class="homepage" id="homepage">
 
     <div class="sections">
@@ -24,7 +19,7 @@
                 <?php include get_theme_file_path('/include/sections/section-two.php'); ?>
                 <?php include get_theme_file_path('/include/sections/section-three.php'); ?>
                 <?php include get_theme_file_path('/include/sections/section-four.php'); ?>
-                <?php include get_theme_file_path('/include/sections/section-five.php'); ?>
+                <?php include get_theme_file_path('/include/sections/houses.php'); ?>
                 <?php include get_theme_file_path('/include/sections/section-six.php'); ?>
                 <?php include get_theme_file_path('/include/sections/section-seven.php'); ?>
             <?php endforeach; ?>

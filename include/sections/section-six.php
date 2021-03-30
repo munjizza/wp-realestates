@@ -1,14 +1,10 @@
-<div class="home-section position-relative" id="section-six">
+<div class="home-section position-relative" id="section-six" style="background-image: url(<?php the_field('card-bgd_square'); ?>);">
   <div class="container">
 
 
     <?php if (have_rows('sections')) : ?>
       <?php while (have_rows('sections')) : the_row(); ?>
         <?php if (get_row_layout() == 'section_six') : ?>
-
-          <div class="image-holder bgd-square">
-            <img src="<?php the_sub_field('bgd_square'); ?> " />
-          </div>
 
           <div class="row align-items-center justify-content-between">
             <div class="col-md-6">
