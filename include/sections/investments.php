@@ -18,16 +18,15 @@
         <?php endif; ?>
 
         <?php $loop = new WP_Query(array(
-            'post_type' => 'houses',
+            'post_type' => 'investments',
             'posts_per_page' => 4
         )); ?>
         <div class="row cards justify-content-center">
 
             <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-
-                <div class="entry-content">
+<!--            <div class="entry-content">
                     <?php the_content(); ?>
-                </div>
+                </div> -->
                 <div class="col-lg-3 col-md-6 col-xs-12 d-flex justify-content-center">
                     <a href="<?php echo get_permalink() ?>">
                         <div class="card house-card">
@@ -57,21 +56,11 @@
                                     $ratingstar = get_field('stars');
                                     ?>
                                     <div class="rating-stars d-flex pt-2">
-                                        <span class="fa fa-star <?php if ($ratingstar >= 1) {
-                                                                    echo 'checked';
-                                                                } ?>"></span>
-                                        <span class="fa fa-star <?php if ($ratingstar >= 2) {
-                                                                    echo 'checked';
-                                                                } ?>"></span>
-                                        <span class="fa fa-star <?php if ($ratingstar >= 3) {
-                                                                    echo 'checked';
-                                                                } ?>"></span>
-                                        <span class="fa fa-star <?php if ($ratingstar >= 4) {
-                                                                    echo 'checked';
-                                                                } ?>"></span>
-                                        <span class="fa fa-star <?php if ($ratingstar == 5) {
-                                                                    echo 'checked';
-                                                                } ?>"></span>
+                                        <span class="fa fa-star <?php if ($ratingstar >= 1) { echo 'checked'; } ?>"></span>
+                                        <span class="fa fa-star <?php if ($ratingstar >= 2) { echo 'checked'; } ?>"></span>
+                                        <span class="fa fa-star <?php if ($ratingstar >= 3) { echo 'checked'; } ?>"></span>
+                                        <span class="fa fa-star <?php if ($ratingstar >= 4) { echo 'checked'; } ?>"></span>
+                                        <span class="fa fa-star <?php if ($ratingstar == 5) { echo 'checked'; } ?>"></span>
                                     </div>
                                 </div>
                             </div>
@@ -82,7 +71,7 @@
         </div>
 
         <div class="content_link_btn text-center">
-            <a class="content-btn font-capitalize" href="<?php echo get_post_type_archive_link( 'houses' ); ?>">View All Investments</a>
+            <a class="content-btn font-capitalize" href="<?php echo get_post_type_archive_link( 'investments' ); ?>">View All Investments</a>
         </div>
     </div>
 </div>

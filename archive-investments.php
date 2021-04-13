@@ -1,6 +1,6 @@
 <?php
 /*
-* Template Name: Houses template
+* Template Name: Investments template
 */ ?>
 
 <?php get_header(); ?>

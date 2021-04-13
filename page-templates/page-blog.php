@@ -5,30 +5,22 @@
 
 <?php get_header(); ?>
 
-    <div class="add-padding">
-        <?php $featured_posts = get_field('relationship_blog'); ?>
-        <?php if ($featured_posts) : ?>
+<div>
+    <?php $featured_posts = get_field('relationship'); ?>
+    <?php if ($featured_posts) : ?>
 
-            <?php foreach ($featured_posts as $post) :
-                // Setup this post for WP functions (variable must be named $post).
-                setup_postdata($post); ?>
-                <?php include get_theme_file_path('/include/sections/section-blog-one.php'); ?>
-                <?php include get_theme_file_path('/include/sections/section-blog-two.php'); ?>
-                <?php include get_theme_file_path('/include/sections/section-blog-three.php'); ?>
-                <?php include get_theme_file_path('/include/sections/section-blog-four.php'); ?>
+        <?php foreach ($featured_posts as $post) :
+            setup_postdata($post); ?>
+            <?php include get_theme_file_path('/include/sections/topList-1-3.php'); ?>
+            <?php include get_theme_file_path('/include/sections/title_latest-top3.php'); ?>
+            <?php include get_theme_file_path('/include/sections/list-3-essentialGuides.php'); ?>
+            <?php include get_theme_file_path('/include/sections/top3-ofAllCategories.php'); ?>
+        <?php endforeach; ?>
 
-            <?php endforeach; ?>
+        <?php
+        wp_reset_postdata(); ?>
 
-            <?php
-            // Reset the global post object so that the rest of the page works correctly.
-            wp_reset_postdata(); ?>
-
-        <?php endif; ?>
-    </div>
-
-
-
-
-
+    <?php endif; ?>
+</div>
 
 <?php get_footer(); ?>

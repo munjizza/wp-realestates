@@ -36,21 +36,11 @@ $category_id = $categories[0]->cat_ID;
                     <?php
                     $ratingstar = get_field('stars');
                     ?>
-                    <span class="fa fa-star <?php if ($ratingstar >= 1) {
-                                                echo 'checked';
-                                            } ?>"></span>
-                    <span class="fa fa-star <?php if ($ratingstar >= 2) {
-                                                echo 'checked';
-                                            } ?>"></span>
-                    <span class="fa fa-star <?php if ($ratingstar >= 3) {
-                                                echo 'checked';
-                                            } ?>"></span>
-                    <span class="fa fa-star <?php if ($ratingstar >= 4) {
-                                                echo 'checked';
-                                            } ?>"></span>
-                    <span class="fa fa-star <?php if ($ratingstar == 5) {
-                                                echo 'checked';
-                                            } ?>"></span>
+                    <span class="fa fa-star <?php if ($ratingstar >= 1) { echo 'checked'; } ?>"></span>
+                    <span class="fa fa-star <?php if ($ratingstar >= 2) { echo 'checked'; } ?>"></span>
+                    <span class="fa fa-star <?php if ($ratingstar >= 3) { echo 'checked'; } ?>"></span>
+                    <span class="fa fa-star <?php if ($ratingstar >= 4) { echo 'checked'; } ?>"></span>
+                    <span class="fa fa-star <?php if ($ratingstar == 5) { echo 'checked'; } ?>"></span>
                 </td>
             </tbody>
         </table>
@@ -67,7 +57,7 @@ $category_id = $categories[0]->cat_ID;
         <div class="post-list row">
             <?php
             $house_posts = new WP_Query(array(
-                'post_type' => 'houses',
+                'post_type' => 'investments',
                 'post__not_in' => array($post->ID),
                 'posts_per_page' => 3,
                 'order' => 'ASC'

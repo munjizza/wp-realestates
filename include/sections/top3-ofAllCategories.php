@@ -26,14 +26,10 @@
                             if ($posts) {
                                 echo '<h3 class="post-category mt-5"><a href="' . get_category_link($category->term_id) . '" title="' . sprintf(__("View all posts in %s"), $category->name) . '" ' . '>' . $category->name . '</a> </h3> ';
                             ?>
-
                                 <div class="row align-items-start justify-content-between cards-top3">
 
-                                    <?php
-
-                                    foreach ($posts as $post) {
+                                    <?php foreach ($posts as $post) {
                                         setup_postdata($post); ?>
-
 
                                         <div class="col-md-4 d-flex justify-content-center">
                                             <div class="card">
@@ -54,7 +50,7 @@
                                         </div>
 
                                     <?php
-                                    } // foreach($posts
+                                    }
                                     ?>
 
                                 </div>

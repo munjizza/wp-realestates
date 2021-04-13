@@ -41,115 +41,82 @@ add_action('after_setup_theme', 'realestate_theme_support');
 function realestate_menus()
 {
   $locations = array(
-    'header_nav' => "Header Nav",
-    'header-black_nav' => "Header Nav - Black",
-    'footer_nav' => "Footer Nav",
-    'footer_nav_terms' => "Footer Nav Terms",
-    'footer_nav_social' => "Footer Menu Social",
+    'header_nav' => "Header",
+    'header_nav_black' => "Header - black",
+    'footer_nav' => "Footer",
+    'footer_nav_terms' => "Footer - terms"
   );
   register_nav_menus($locations);
 }
 
 add_action('init', 'realestate_menus');
 
-// Add sections to admin panel
-// function sections_posttype()
-// {
-//     register_post_type('sections',
-//         array(
-//             'labels' => array(
-//                 'name' => __('Sections'),
-//                 'singular_name' => __('Section'),
-//             ),
-//             'public' => true,
-//             'has_archive' => true,
-//             'rewrite' => array('slug' => 'Sections'),
-//             'show_in_rest' => true,
-//             'menu_icon' => 'dashicons-admin-page',
-//             'taxonomies' => array('category')
-//         )
-//     );
-// }
 
-// add_action('init', 'sections_posttype');
+// Add options page to admin panel
+if( function_exists('acf_add_options_page') ) {
 
+	acf_add_options_page(array(
+		'page_title' 	=> 'Additional Fields',
+		'menu_title'	=> 'Additional Fields',
+		'menu_slug' 	=> 'additional-fields-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
 
-// if( function_exists('acf_add_options_page') ) {
-//
-//     acf_add_options_page(array(
-//         'page_title' 	=> 'Theme General Settings',
-//         'menu_title'	=> 'Additional Theme Settings',
-//         'menu_slug' 	=> 'theme-general-settings',
-//         'capability'	=> 'edit_posts',
-//         'redirect'		=> true
-//     ));
-//
-//     acf_add_options_sub_page(array(
-//         'page_title' 	=> 'Theme Footer Settings',
-//         'menu_title'	=> 'Footer',
-//         'parent_slug'	=> 'theme-general-settings',
-//     ));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Additional Footer Fields',
+		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'additional-fields-settings',
+	));
 
-if (function_exists('acf_add_options_page')) {
-
-  acf_add_options_page();
+  acf_add_options_sub_page(array(
+		'page_title' 	=> 'Additional Header Fields',
+		'menu_title'	=> 'Header',
+		'parent_slug'	=> 'additional-fields-settings',
+	));
 }
 
+// Add sections to admin panel
+function sections_posttype()
+{
+    register_post_type('sections',
+        array(
+            'labels' => array(
+                'name' => __('Sections'),
+                'singular_name' => __('Section'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'Sections'),
+            'show_in_rest' => true,
+            'menu_position' => 7,
+        )
+    );
+}
 
-// if( function_exists('acf_add_options_page') ) {
+add_action('init', 'sections_posttype');
 
-// 	acf_add_options_page(array(
-// 		'page_title' 	=> 'Theme General Settings',
-// 		'menu_title'	=> 'Theme Settings',
-// 		'menu_slug' 	=> 'theme-general-settings',
-// 		'capability'	=> 'edit_posts',
-// 		'redirect'		=> false
-// 	));
-
-// 	acf_add_options_sub_page(array(
-// 		'page_title' 	=> 'Theme Header Settings',
-// 		'menu_title'	=> 'Header',
-// 		'parent_slug'	=> 'theme-general-settings',
-// 	));
-
-// 	acf_add_options_sub_page(array(
-// 		'page_title' 	=> 'Theme Footer Settings',
-// 		'menu_title'	=> 'Footer',
-// 		'parent_slug'	=> 'theme-general-settings',
-// 	));
-
-// }
-
-// Our custom post type function
+// Custom post type function
 function create_posttype()
 {
-  // Set UI labels for Custom Post Type
   $labels = array(
-    'name' => __('Houses'),
-    'singular_name' => __('House'),
-    'menu_name'           => __('Houses'),
-    'all_items'           => __('All Houses'),
-    'view_item'           => __('View House'),
-    'add_new_item'        => __('Add New House'),
+    'name' => __('Investments'),
+    'singular_name' => __('Investment'),
+    'menu_name'           => __('Investments'),
+    'all_items'           => __('All Investments'),
+    'view_item'           => __('View Investments'),
+    'add_new_item'        => __('Add New Investment'),
     'add_new'             => __('Add New'),
-    'edit_item'           => __('Edit House'),
-    'update_item'         => __('Update House'),
-    'search_items'        => __('Search House'),
+    'edit_item'           => __('Edit Investment'),
+    'update_item'         => __('Update Investment'),
+    'search_items'        => __('Search Investment'),
   );
 
   $args = array(
-    'label'               => __('houses'),
-    'description'         => __('House properties'),
+    'label'               => __('investments'),
+    'description'         => __('Investments - properties'),
     'labels'              => $labels,
-    // Features this CPT supports in Post Editor
     'supports'            => array('title', 'excerpt', 'thumbnail', 'custom-fields'),
-    // You can associate this CPT with a taxonomy or custom taxonomy. 
-    // 'taxonomies'          => array( 'genres' ),
-    /* A hierarchical CPT is like Pages and can have
-        * Parent and child items. A non-hierarchical CPT
-        * is like Posts.
-        */
-    // 'rewrite' => array('slug' => 'houses', 'with_front' => false),
     'hierarchical'        => false,
     'has_archive'         => true,
     'public'              => true,
@@ -166,9 +133,7 @@ function create_posttype()
     'show_in_rest' => true,
   );
 
-  // Registering your Custom Post Type
-  register_post_type('houses', $args);
+  register_post_type('investments', $args);
 }
 
-// Hooking up our function to theme setup
 add_action('init', 'create_posttype');

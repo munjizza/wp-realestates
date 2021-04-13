@@ -1,25 +1,7 @@
 <div class="home-section position-relative" id="section-six" style="background-image: url(<?php the_field('card-bgd_square'); ?>);">
-  <div class="container">
+  <div class="container d-flex flex-column">
 
-
-    <?php if (have_rows('sections')) : ?>
-      <?php while (have_rows('sections')) : the_row(); ?>
-        <?php if (get_row_layout() == 'section_six') : ?>
-
-          <div class="row align-items-center justify-content-between">
-            <div class="col-md-6">
-              <h2 class="content_title"><?php the_sub_field('content_title'); ?><br><span><?php the_sub_field('content_title_orange'); ?></span></h2>
-            </div>
-            <div class="col-md-6">
-              <p class="content_lead"><?php the_sub_field('content_lead'); ?></p>
-            </div>
-          </div>
-
-        <?php endif; ?>
-      <?php endwhile; ?>
-    <?php endif; ?>
-
-    <div class="row align-items-start justify-content-between cards-top3">
+    <div class="row align-items-start justify-content-between cards-top3 order-1">
 
       <?php $the_query = new WP_Query('posts_per_page=3'); ?>
 
@@ -49,9 +31,18 @@
 
     <?php if (have_rows('sections')) : ?>
       <?php while (have_rows('sections')) : the_row(); ?>
-        <?php if (get_row_layout() == 'section_six') : ?>
+        <?php if (get_row_layout() == 'titleText_latest-top3_btn') : ?>
 
-          <div class="content_link_btn text-center mt-5">
+          <div class="row align-items-center justify-content-between order-0">
+            <div class="col-md-6">
+              <h2 class="content_title"><?php the_sub_field('content_title'); ?><br><span><?php the_sub_field('content_title_orange'); ?></span></h2>
+            </div>
+            <div class="col-md-6">
+              <p class="content_lead"><?php the_sub_field('content_lead'); ?></p>
+            </div>
+          </div>
+
+          <div class="content_link_btn text-center mt-5 order-2">
             <?php $link = get_sub_field('content_link'); ?>
             <a class="content-btn" href="<?php echo $link['url'] ?>"><?php echo $link['title'] ?></a>
           </div>

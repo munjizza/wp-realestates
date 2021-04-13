@@ -1,13 +1,13 @@
 <?php
 /*
-* Template Name: Home template
+* Template Name: How it works template
 */
 ?>
 
 <?php get_header(); ?>
 
 <div class="homepage" id="homepage">
-
+ test 
     <div class="sections">
         <?php $featured_posts = get_field('relationship'); ?>
         <?php if ($featured_posts) : ?>
@@ -15,13 +15,7 @@
             <?php foreach ($featured_posts as $post) :
                 // Setup this post for WP functions (variable must be named $post).
                 setup_postdata($post); ?>
-                <?php include get_theme_file_path('/include/sections/titleTextBnt-image.php'); ?>
-                <?php include get_theme_file_path('/include/sections/image-titleTextBtn.php'); ?>
-                <?php include get_theme_file_path('/include/sections/title-4cards.php'); ?>
-                <?php include get_theme_file_path('/include/sections/titleTextChart.php'); ?>
                 <?php include get_theme_file_path('/include/sections/investments.php'); ?>
-                <?php include get_theme_file_path('/include/sections/titleText_latest-top3_btn.php'); ?>
-                <?php include get_theme_file_path('/include/sections/titleFormBtn-image.php'); ?>
             <?php endforeach; ?>
 
             <?php
