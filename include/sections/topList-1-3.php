@@ -4,7 +4,7 @@
             <div class="container" id="">
 
 
-                <h2 class="content_title text-center"><?php the_sub_field('section-title'); ?></h2>
+                <h2 class="content_title text-center mb-5"><?php the_sub_field('section-title'); ?></h2>
 
 
             </div>
@@ -35,8 +35,7 @@
                                     <h4 class="blog-posts-title"><a href="<?php the_permalink(); ?>"
                                                                     title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                                     </h4>
-                                    <a href="<?php the_permalink(); ?>" class="blog-readmore-btn">Read more<i
-                                                class="fa fa-arrow-right"></i></a>
+                                    <a href="<?php the_permalink(); ?>" class="blog-readmore-btn">Read more<i class="fa fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>

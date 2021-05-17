@@ -5,7 +5,7 @@
 
 <?php get_header(); ?>
 
-<div class="container">
+<div class="container add-padding">
   <?php $featured_posts = get_field('relationship'); ?>
   <?php if ($featured_posts) : ?>
 

@@ -19,10 +19,10 @@ $category_id = $categories[0]->cat_ID;
     </div>
 
     <div class="single-post-related">
-        <div class="heading">
+        <h4 class="heading font-weight-bold mb-3">
             <span class="readmore">Read More on </span>
             <span class="category"><?php echo get_the_category($id)[0]->name ?></span>
-        </div>
+        </h4>
 
         <div class="post-list row">
             <?php $args = array(

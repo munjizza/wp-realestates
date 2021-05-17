@@ -5,8 +5,8 @@
 
 get_header(); ?>
 
-<div class="container pt-5">
-  <h1 class="content_title text-center mt-5"> <?php single_cat_title('', true); ?> </h1>
+<div class="container add-padding">
+  <h1 class="content_title text-center"> <?php single_cat_title('', true); ?> </h1>
 
   <?php
   if (have_posts()) : ?>
@@ -32,7 +32,7 @@ get_header(); ?>
               <a class="box-title card-title text-uppercase"><?php the_title(); ?></a>
               <?php $excerpt = get_the_excerpt(); ?>
               <p class="box-text card-text"><?php echo $excerpt ?></p>
-              <a class="content-link" href="<?php the_permalink(); ?>">Read More</a>
+              <a class="content-link" href="<?php the_permalink(); ?>">Read More <i class="fa fa-arrow-right text-primary"></i></a>
             </div>
           </div>
           

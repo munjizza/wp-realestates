@@ -9,7 +9,7 @@
             <?php while (have_rows('faq')) : the_row(); ?>
                 <?php if (get_row_layout() == 'faq') : ?>
 
-                    <h2 class="content_title text-center mt-5"><?php the_sub_field('heading'); ?></h2>
+                    <h2 class="content_title text-center"><?php the_sub_field('heading'); ?></h2>
                     <p class="content_lead text-center mt-5 questions-heding-lead-text"><?php the_sub_field('lead_text'); ?></p>
 
                     <div class="justify-content-center">

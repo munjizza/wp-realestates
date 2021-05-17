@@ -13,7 +13,7 @@ $category_id = $categories[0]->cat_ID;
             <div class="lead-img" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"></div>
         <?php }; ?>
         <div class="post-box-span excerpt-block d-block"><?php the_excerpt(); ?></div>
-        <table class="container-fluid mt-4 mb-5">
+        <table class="container-fluid mt-4 mb-5 bg-light">
             <thead class="font-weight-bold">
                 <td>price</td>
                 <td>beds</td>
@@ -51,7 +51,7 @@ $category_id = $categories[0]->cat_ID;
 
     <div class="single-post-related">
         <div class="heading">
-            <h3 class="readmore mt-5 mb-3">See other houses</h3>
+            <h4 class="readmore mt-5 font-weight-bold mb-3">See other houses</h4>
         </div>
 
         <div class="post-list row">

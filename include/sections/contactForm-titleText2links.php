@@ -2,7 +2,7 @@
     <?php while (have_rows('contact')) : the_row(); ?>
         <?php if (get_row_layout() == 'contact') : ?>
 
-            <h2 class="content_title text-center mt-5"><?php the_sub_field('heading_title'); ?></h2>
+            <h2 class="content_title text-center"><?php the_sub_field('heading_title'); ?></h2>
 
             <div class="row justify-content-between contact-container position-relative mt-5">
 
