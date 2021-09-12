@@ -1,1 +1,1 @@
-* Wordpress practice
+# Wordpress custom theme practice
